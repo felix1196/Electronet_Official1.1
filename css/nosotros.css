@@ -1,0 +1,141 @@
+/* ===========================
+   ESTILOS PARA NOSOTROS.HTML
+   =========================== */
+
+/* Fondo para toda la página */
+#nosotros-page {
+    background: #f8f9fa;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+/* Títulos */
+#nosotros-page h2,
+#nosotros-page h3 {
+    letter-spacing: -0.5px;
+}
+
+/* Tipografía general */
+#nosotros-page p,
+#nosotros-page li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Imágenes */
+#nosotros-page img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transition: transform .3s ease;
+    object-fit: cover;
+}
+
+#nosotros-page img:hover {
+    transform: scale(1.02);
+}
+
+/* Tarjetas */
+#nosotros-page .card {
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#nosotros-page .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+/* Listas */
+#nosotros-page ul li {
+    margin-bottom: 8px;
+}
+
+/* Botón volver */
+.back-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background .3s ease;
+}
+
+.back-btn:hover {
+    background: #0a58ca !important;
+}
+
+/* ===== HERO RESPONSIVO ===== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url('../img/Desarrollo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 80px;
+}
+
+/* Overlay opaco */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* Opacidad correcta */
+}
+
+/* Título responsivo */
+.hero-title {
+    position: relative;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.2rem); /* RESPONSIVO */
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+    padding: 0 20px; /* evita que se pegue en móviles */
+}
+
+/* ===========================
+   MEDIA QUERIES RESPONSIVAS
+   =========================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+    #nosotros-page {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    .hero-section {
+        height: 270px;
+        margin-top: 70px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    #nosotros-page {
+        padding-top: 110px;
+    }
+
+    .hero-section {
+        height: 220px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 576px) {
+    #nosotros-page p,
+    #nosotros-page li {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        height: 190px;
+    }
+}
