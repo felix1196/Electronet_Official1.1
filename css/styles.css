@@ -94,7 +94,7 @@ footer i {
 /* === Carousel Styles === */
 .carousel-img {
   height: 600px; /* Más alto */
-  object-fit:fill;
+  object-fit: fill;
 }
 
 .carousel-caption h5 {
@@ -153,14 +153,27 @@ footer i {
   animation: fadeUp 1.2s ease-in-out 0.4s both;
 }
 
-/* Ajustes responsivos */
+/* Ajustes responsivos adicionales */
 @media (max-width: 768px) {
-  .carousel-caption h5 {
-    font-size: 1.5rem;
+
+  /* ⛔ Ocultar textos <p> en celular */
+  .carousel-caption p {
+    display: none !important;
   }
 
-  .carousel-caption p {
-    font-size: 1rem;
+  /* Ajustar título en celular */
+  .carousel-caption h5 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  /* Ajustar posición del caption si lo deseas */
+  .carousel-caption {
+    bottom: 25px;
   }
 }
 
