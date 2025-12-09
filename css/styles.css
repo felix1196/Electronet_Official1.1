@@ -21,7 +21,7 @@
 
 /* Enlaces del navbar */
 .navbar-nav .nav-link {
-  color: #0e7ee7 !important;
+  color: #000000 !important;
   font-weight: 500;
   font: bold;
   margin-right: 30px;
@@ -29,7 +29,7 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #0e0841 !important;
+  color: #970b0b !important;
 }
 
 /* Botón hamburguesa (oscuro) */
@@ -93,8 +93,8 @@ footer i {
 
 /* === Carousel Styles === */
 .carousel-img {
-  height: 650px; /* Más alto */
-  object-fit: cover;
+  height: 600px; /* Más alto */
+  object-fit:fill;
 }
 
 .carousel-caption h5 {
@@ -179,7 +179,7 @@ footer i {
 
 .about-section img {
   border-radius: 32px;
-  height: 400px;
+  height: 200px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -214,7 +214,7 @@ footer i {
   left: 0;
   width: 20%;
   height: 100%;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 60%);
+  background: linear-gradient(135deg, #920a11 10%, #0056b3 60%);
   clip-path: ellipse(75% 100% at 0% 50%);
   z-index: 1;
 }
@@ -318,7 +318,6 @@ footer i {
   filter: grayscale(0%);
 }
 
-
 /* Animación suave sin saltos */
 @keyframes scroll-infinito {
   0% {
@@ -373,6 +372,10 @@ footer i {
 /* ------------------------------------------------------------------
    MODAL PROFESIONAL
 -------------------------------------------------------------------*/
+
+.bg-contacto {
+  background-color: #f8f9fa; /* Cambia el color */
+}
 
 .modal-custom {
   display: none;
