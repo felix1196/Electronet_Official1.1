@@ -337,24 +337,23 @@
       <div class="col-12 col-md-8">
 
         <!-- FORMULARIO FUNCIONAL CON FORMSUBMIT -->
-        <form action="https://formsubmit.co/felix1196.jfrv@gmail.com" method="POST">
+<form id="contactForm" action="https://formsubmit.co/felix1196.jfrv@gmail.com" method="POST">
 
-  <input type="hidden" name="_next" value="http://localhost:8000/gracias.html">
   <input type="hidden" name="_captcha" value="false">
 
   <div class="mb-3">
     <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="Nombre" required>
+    <input type="text" class="form-control" id="nombre" name="name" required>
   </div>
 
   <div class="mb-3">
     <label for="email" class="form-label">Correo electrónico</label>
-    <input type="email" class="form-control" id="email" name="Email" required>
+    <input type="email" class="form-control" id="email" name="email" required>
   </div>
 
   <div class="mb-3">
     <label for="mensaje" class="form-label">Mensaje</label>
-    <textarea class="form-control" id="mensaje" name="Mensaje" rows="4" required></textarea>
+    <textarea class="form-control" id="mensaje" name="message" rows="4" required></textarea>
   </div>
 
   <button type="submit" class="btn btn-primary w-100">Enviar</button>
@@ -426,6 +425,74 @@
   });
   
 </script>
+
+<!-- Modal Profesional -->
+<div id="successModal" class="modal-custom">
+  <div class="modal-content-custom">
+
+    <div class="modal-icon">
+      <svg width="70" height="70" viewBox="0 0 24 24">
+        <path fill="none" stroke="#28a745" stroke-width="2" 
+              d="M2 12l5 5L22 4"/>
+      </svg>
+    </div>
+
+    <h3 id="successTitle"></h3>
+    <p id="successMessage"></p>
+
+    <button class="modal-btn" id="closeModalBtn">Aceptar</button>
+  </div>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Evita el reload
+
+    let form = e.target;
+    let formData = new FormData(form);
+    let nombre = formData.get("name") || "cliente";
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+    })
+    .then(response => {
+        if (response.ok) {
+
+            // Personalizar textos del modal
+            document.getElementById("successTitle").innerText =
+                `Gracias por contactarnos, ${nombre}`;
+
+            document.getElementById("successMessage").innerText =
+                "Nuestros asesores estarán comunicándose para brindarle una mayor atención y servicio.";
+
+            // Mostrar modal
+            document.getElementById("successModal").style.display = "flex";
+
+            form.reset();
+        } else {
+            alert("Ocurrió un error al enviar el formulario.");
+        }
+    })
+    .catch(() => alert("Error de conexión al enviar el formulario."));
+});
+
+// Botón cerrar
+document.getElementById("closeModalBtn").addEventListener("click", () => {
+    document.getElementById("successModal").style.display = "none";
+});
+
+// Cerrar clic afuera
+window.onclick = function(event) {
+    let modal = document.getElementById("successModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+
+
 
 </body>
 </html>
