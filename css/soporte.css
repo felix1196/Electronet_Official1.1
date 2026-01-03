@@ -1,0 +1,85 @@
+/* ===========================
+   ESTILOS GENERALES
+   =========================== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* HERO */
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd, #084298);
+  color: #fff;
+  padding: 90px 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* TÍTULOS */
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.servicio-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+.servicio-card span {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   ANIMACIONES SCROLL
+   =========================== */
+
+.scroll-animate {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Direcciones */
+.fade-up {
+  transform: translateY(40px);
+}
+
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}

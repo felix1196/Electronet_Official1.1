@@ -445,3 +445,139 @@ footer i {
   from { opacity: 0; transform: translateY(-20px) scale(.95); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.servicio-detalle {
+  scroll-margin-top: 100px; /* evita que el navbar tape el título */
+}
+
+.servicio-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+.servicio-lista li {
+  padding-left: 28px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.servicio-lista li::before {
+  content: "✔";
+  color: #0d6efd;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ===============================
+   SECCIONES DE SERVICIOS - DETALLE
+   =============================== */
+
+.servicio-detalle {
+  padding: 110px 0; /* MÁS ALTURA */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen grande */
+.servicio-detalle img {
+  max-width: 90%;
+  border-radius: 28px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.servicio-detalle img:hover {
+  transform: scale(1.04);
+}
+
+/* Texto */
+.servicio-detalle h2 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.servicio-detalle p.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* Lista elegante */
+.servicio-lista {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 25px;
+}
+
+.servicio-lista li {
+  font-size: 1.05rem;
+  padding-left: 30px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.servicio-lista li::before {
+  content: "✔";
+  color: #0d6efd;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* ===== ANIMACIONES SCROLL ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Izquierda */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s ease;
+}
+
+.reveal-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Derecha */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s ease;
+}
+
+.reveal-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Evita que navbar tape el título */
+.servicio-detalle {
+  scroll-margin-top: 120px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .servicio-detalle {
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .servicio-detalle img {
+    max-width: 100%;
+  }
+}
