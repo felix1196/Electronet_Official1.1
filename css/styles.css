@@ -761,3 +761,165 @@ html {
     font-size: 0.85rem;
   }
 }
+
+.lista-tecnica {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-tecnica li {
+  padding: 6px 0;
+  position: relative;
+  padding-left: 22px;
+  color: #6c757d;
+}
+
+.lista-tecnica li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.carousel img {
+  object-fit: cover;
+}
+
+/* Hover elegante */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #6c757d;
+}
+
+.carousel-indicators .active {
+  background-color: #0d6efd;
+}
+
+#carouselSoporteTecnico {
+  padding-bottom: 3.5rem;
+}
+
+.carousel-indicators {
+  bottom: -20px;
+}
+
+.carousel-indicators [data-bs-target] {
+  margin: 0 6px;
+}
+
+.aviso-desarrollo {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1.8rem 2rem;
+  border: 1px dashed #ced4da;
+  background-color: #f8f9fa;
+}
+
+.aviso-desarrollo h4 {
+  letter-spacing: 0.5px;
+}
+
+.aviso-desarrollo {
+  border-left: 4px solid #0d6efd;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Estado inicial (oculto y desplazado) */
+.anim-left,
+.anim-right {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* Desde izquierda */
+.anim-left {
+  transform: translateX(-60px);
+}
+
+/* Desde derecha */
+.anim-right {
+  transform: translateX(60px);
+}
+
+/* Estado visible (centrado) */
+.animacion-scroll.activo .anim-left,
+.animacion-scroll.activo .anim-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Lista técnica profesional */
+.lista-tecnica-pro {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.lista-tecnica-pro li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 2.2rem;
+  margin-bottom: 0.4rem;
+  color: #495057;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Indicador técnico */
+.lista-tecnica-pro li span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #0d6efd;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Línea sutil de guía */
+.lista-tecnica-pro li::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(13, 110, 253, 0.15);
+}
+
+/* Hover elegante */
+.lista-tecnica-pro li:hover {
+  color: #212529;
+  padding-left: 2.6rem;
+}
+
+.lista-tecnica-pro li:hover span {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Estado inicial oculto */
+.animar-lista li {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Estado visible */
+.animar-lista.activa li {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* Delay progresivo (efecto escalonado) */
+.animar-lista.activa li:nth-child(1) { transition-delay: 0.1s; }
+.animar-lista.activa li:nth-child(2) { transition-delay: 0.2s; }
+.animar-lista.activa li:nth-child(3) { transition-delay: 0.3s; }
+.animar-lista.activa li:nth-child(4) { transition-delay: 0.4s; }
+.animar-lista.activa li:nth-child(5) { transition-delay: 0.5s; }

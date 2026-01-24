@@ -103,3 +103,35 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(el => observer.observe(el));
+
+  const seccionesAnimadas = document.querySelectorAll('.animacion-scroll');
+
+  const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('activo');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  seccionesAnimadas.forEach(seccion => {
+    observer2.observe(seccion);
+  });
+
+ const listasAnimadas = document.querySelectorAll('.animar-lista');
+
+  const observerLista = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('activa');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  listasAnimadas.forEach(lista => {
+    observerLista.observe(lista);
+  });
