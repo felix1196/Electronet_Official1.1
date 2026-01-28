@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', handleNavbarScroll);
   handleNavbarScroll(); // ejecutar al cargar
 
-
-
   // -------------------------------
   // REVEAL + CASCADA
   // -------------------------------
@@ -33,15 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-
-
   // ------------------------------------
   // IntersectionObserver (Método ideal)
   // ------------------------------------
   if ("IntersectionObserver" in window) {
     const observerOptions = {
       root: null,
-      rootMargin: "0px 0px -100px 0px", 
+      rootMargin: "0px 0px -100px 0px",
       threshold: 0
     };
 
@@ -104,34 +100,34 @@ const observer = new IntersectionObserver(
 
 reveals.forEach(el => observer.observe(el));
 
-  const seccionesAnimadas = document.querySelectorAll('.animacion-scroll');
+const seccionesAnimadas = document.querySelectorAll('.animacion-scroll');
 
-  const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('activo');
-      }
-    });
-  }, {
-    threshold: 0.3
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('activo');
+    }
   });
+}, {
+  threshold: 0.3
+});
 
-  seccionesAnimadas.forEach(seccion => {
-    observer2.observe(seccion);
+seccionesAnimadas.forEach(seccion => {
+  observer2.observe(seccion);
+});
+
+const listasAnimadas = document.querySelectorAll('.animar-lista');
+
+const observerLista = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('activa');
+    }
   });
+}, {
+  threshold: 0.3
+});
 
- const listasAnimadas = document.querySelectorAll('.animar-lista');
-
-  const observerLista = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('activa');
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-
-  listasAnimadas.forEach(lista => {
-    observerLista.observe(lista);
-  });
+listasAnimadas.forEach(lista => {
+  observerLista.observe(lista);
+});
