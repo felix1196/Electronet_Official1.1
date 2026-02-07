@@ -741,7 +741,7 @@ html {
 /* CONTENEDOR GENERAL */
 .mosaico-profesional .mosaico-item {
   height: 140px;
-  background-color: #054f9a;
+  background-color: #011120c2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -759,7 +759,7 @@ html {
 }
 
 .mosaico-profesional p {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: #ffffff;
   margin: 0;
 }
@@ -959,4 +959,133 @@ html {
 
 .animar-lista.activa li:nth-child(5) {
   transition-delay: 0.5s;
+}
+
+/* ==============================
+   SECCIÓN CON FONDO
+================================ */
+.web-bg-section {
+  position: relative;
+  background-image: url("../img/web-development-t-1-2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 50px;
+}
+
+.web-bg-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.web-bg-section .row {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==============================
+   CARDS – ESTADO INICIAL
+================================ */
+.web-card {
+  margin-bottom: 30px; /* separación visual */
+  background: rgba(0, 0, 0, 0.45); /* más sólido */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 42px 38px;
+  color: #ffffff;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  transition-delay: var(--delay);
+}
+
+/* ==============================
+   CARDS – AL ENTRAR EN PANTALLA
+================================ */
+.web-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+   GLOW SUAVE AL HOVER
+================================ */
+.web-card:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 0 14px rgba(216, 220, 223, 0.35),
+    0 0 34px rgba(253, 254, 255, 0.18);
+  transform: translateY(0.06s)
+}
+
+/* ==============================
+   TEXTO BLANCO INTENSO
+================================ */
+.web-card h4,
+.web-card p {
+  color: rgba(231, 229, 229, 0.911);
+  opacity: 1;
+}
+
+.web-card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.web-card p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* ==============================
+   LÍNEA INTERNA SUTIL (PRO)
+================================ */
+.web-card::after {
+  display: block;
+  margin-top: 16px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 4.2rem;   /* más grande */
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  width:350px;
+  height: auto;  
+}
+
+.video-container::before {  
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
 }

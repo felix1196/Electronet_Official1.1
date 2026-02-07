@@ -131,3 +131,22 @@ const observerLista = new IntersectionObserver((entries) => {
 listasAnimadas.forEach(lista => {
   observerLista.observe(lista);
 });
+
+
+const cards = document.querySelectorAll('.web-card');
+
+  const observerWebCard = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observerWebCard.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  cards.forEach(card => observerWebCard.observe(card));
