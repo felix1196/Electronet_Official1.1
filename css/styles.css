@@ -1122,3 +1122,183 @@ html {
   font-size: 15px;
   line-height: 1.6;
 }
+
+.servicio-apps {
+  position: relative;
+  background-image: url("../img/softwareportada.png"); /* pon aquí la imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax ligero */
+  padding: 100px 0;
+}
+
+.apps-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.35)
+  );
+  z-index: 1;
+}
+
+.servicio-apps .container {
+  position: relative;
+  z-index: 2;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.apps-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.apps-lista li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.apps-lista li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.anim-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.9s ease;
+}
+
+.anim-left.anim-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Cards */
+.apps-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  color: white;
+}
+
+.apps-card h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.apps-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;  
+  color: white;
+}
+
+.apps-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.apps-card ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.apps-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* LISTA ESTILO PRICING */
+.apps-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.apps-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Punto tipo check */
+.apps-card ul li::before {
+  content: "✔";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d6efd, #00c6ff);
+  color: #fff;
+  font-size: 0.7rem;  
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.apps-card.destacada ul li::before {
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+}
+
+.apps-card {
+  background: rgba(255, 255, 255, 0.75); /* transparencia */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 18px;
+  padding: 30px 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+  transition: all 0.35s ease;
+}
+
+.apps-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.apps-section {
+  background: linear-gradient(135deg, #f4f7fb, #eef2f7);
+  padding: 80px 0;
+}
+
+.apps-card.azul {
+  background: rgba(13, 110, 253, 0.08);
+}
+
+.apps-card.naranja {
+  background: rgba(255, 122, 24, 0.1);
+}
+
+.apps-card.verde {
+  background: rgba(0, 200, 150, 0.1);
+}

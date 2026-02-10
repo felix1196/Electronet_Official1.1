@@ -164,3 +164,13 @@ const cards = document.querySelectorAll('.web-card');
   document.querySelectorAll('.anim-fade-up')
     .forEach(el => observerNewWeb.observe(el));
 
+const observerApps = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("anim-active");
+      }
+    });
+  }, { threshold: 0.2 });
+
+document.querySelectorAll(".anim-left, .anim-up")
+    .forEach(el => observerApps.observe(el));
