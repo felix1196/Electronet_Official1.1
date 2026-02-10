@@ -150,3 +150,17 @@ const cards = document.querySelectorAll('.web-card');
   );
 
   cards.forEach(card => observerWebCard.observe(card));
+
+
+
+  const observerNewWeb = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('anim-active');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.anim-fade-up')
+    .forEach(el => observerNewWeb.observe(el));
+
