@@ -1400,3 +1400,95 @@ html {
   top: 0;
   left: 0;
 }
+
+.servicio-camaras {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8f9fa, #f8f9fa);
+  position: relative;
+}
+
+.badge-servicio {
+  display: inline-block;
+  background: #0d6efd;
+  color: white;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.titulo-servicio {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.descripcion-servicio {
+  font-size: 17px;
+  color: #555;
+}
+
+.descripcion-secundaria {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.lista-beneficios {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-beneficios li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.imagen-servicio {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Cards */
+
+.card-servicio {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.card-servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+}
+
+.card-servicio .icono {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.card-servicio h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-servicio p {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.texto-final {
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .servicio-camaras {
+    padding: 80px 0;
+  }
+}
