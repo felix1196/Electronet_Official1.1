@@ -1129,7 +1129,7 @@ html {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* parallax ligero */
-  padding: 100px 0;
+  padding: 40px 40px;
 }
 
 .apps-overlay {
@@ -1149,7 +1149,7 @@ html {
 }
 
 .min-vh-75 {
-  min-height: 75vh;
+   min-height: 54vh;
 }
 
 .apps-lista {
@@ -1188,7 +1188,7 @@ html {
 .apps-card {
   background: #ffffff;
   border-radius: 14px;
-  padding: 25px;
+  padding: 10px;
   height: 100%;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
   color: white;
@@ -1288,7 +1288,7 @@ html {
 
 .apps-section {
   background: linear-gradient(135deg, #f4f7fb, #eef2f7);
-  padding: 80px 0;
+ padding: 50px 50px;
 }
 
 .apps-card.azul {
@@ -1402,76 +1402,91 @@ html {
 }
 
 .servicio-camaras {
-  padding: 120px 0;
+  padding: 100px 70px; /* Más aire arriba y abajo */
   background: linear-gradient(135deg, #f8f9fa, #f8f9fa);
   position: relative;
 }
 
+/* Separación estructural entre bloques */
+.servicio-camaras .row {
+  margin-bottom: 70px;
+}
+
+/* Badge */
 .badge-servicio {
   display: inline-block;
   background: #0d6efd;
   color: white;
   font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 20px;
-  margin-bottom: 15px;
+  padding: 15px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
   letter-spacing: 1px;
 }
 
+/* Título */
 .titulo-servicio {
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  line-height: 1.2;
 }
 
+/* Descripción */
 .descripcion-servicio {
   font-size: 17px;
   color: #555;
+  margin-bottom: 20px;
 }
 
 .descripcion-secundaria {
   color: #6c757d;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* Lista */
 .lista-beneficios {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .lista-beneficios li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 500;
 }
 
+/* Imagen */
 .imagen-servicio {
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
 }
 
+/* ===================== */
 /* Cards */
+/* ===================== */
 
 .card-servicio {
   background: white;
-  padding: 40px 25px;
+  padding: 45px 30px;
   border-radius: 20px;
-  transition: 0.4s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
   height: 100%;
 }
 
 .card-servicio:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
 
 .card-servicio .icono {
-  font-size: 35px;
-  margin-bottom: 15px;
+  font-size: 38px;
+  margin-bottom: 20px;
 }
 
 .card-servicio h5 {
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .card-servicio p {
@@ -1479,16 +1494,35 @@ html {
   font-size: 14px;
 }
 
+/* ===================== */
+/* Texto final */
+/* ===================== */
+
 .texto-final {
   font-size: 18px;
   font-weight: 500;
   color: #444;
+  margin-top: 80px; /* Separación elegante del bloque de cards */
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
+/* ===================== */
 /* Responsive */
+/* ===================== */
 
 @media (max-width: 991px) {
   .servicio-camaras {
-    padding: 80px 0;
+    padding: 80px 25px;
+  }
+
+  .servicio-camaras .row {
+    margin-bottom: 50px;
+  }
+
+  .texto-final {
+    margin-top: 60px;
   }
 }
