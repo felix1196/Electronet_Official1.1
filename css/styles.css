@@ -1526,3 +1526,102 @@ html {
     margin-top: 60px;
   }
 }
+
+.servicios-tecnologicos {
+  padding: 140px 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+.badge-corporativo {
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  background: #0d1b2a;
+  color: #fff;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.titulo-corporativo {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.descripcion-corporativa {
+  color: #6c757d;
+  font-size: 17px;
+}
+
+/* Línea vertical central */
+
+.linea-central {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 2px;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, #0d1b2a20, transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.bloque-enterprise {
+  position: relative;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.contenido-enterprise h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contenido-enterprise p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.card-corporativa {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  transition: 0.4s ease;
+  border-left: 3px solid #0d1b2a;
+}
+
+.card-corporativa:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+}
+
+/* Estadísticas */
+
+.estadisticas-enterprise {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid #e9ecef;
+}
+
+.stat-box h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0d1b2a;
+}
+
+.stat-box p {
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .linea-central {
+    display: none;
+  }
+}

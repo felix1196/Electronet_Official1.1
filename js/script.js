@@ -174,3 +174,35 @@ const observerApps = new IntersectionObserver(entries => {
 
 document.querySelectorAll(".anim-left, .anim-up")
     .forEach(el => observerApps.observe(el));
+
+   const counters = document.querySelectorAll('.counter');
+
+  const startCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / 100;
+
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  };
+
+  const observerSupport = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observerSupport.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach(counter => {
+    observerSupport.observe(counter);
+  });
